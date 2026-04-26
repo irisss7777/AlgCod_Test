@@ -1,0 +1,21 @@
+{
+  "MaxAngle": 40,
+  "Materials": [
+    {
+      "MaterialFriction": [
+        { "MinValue": 0.74, "MaxValue": 0.74 },
+        { "MinValue": 0.5, "MaxValue": 0.55 },
+        { "MinValue": 0.05, "MaxValue": 0.1 },
+        { "MinValue": 0.4, "MaxValue": 0.45 }
+      ]
+    },
+    {
+      "MaterialFriction": [
+        { "MinValue": 0.5, "MaxValue": 0.55 },
+        { "MinValue": 0.6, "MaxValue": 0.7 },
+        { "MinValue": 0.15, "MaxValue": 0.2 },
+        { "MinValue": 0.25, "MaxValue": 0.3 }
+      ]
+    }
+  ]
+}

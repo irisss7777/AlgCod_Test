@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89cc1d20e4942d694e271d00151a8ce, type: 3}
+  m_Name: MaterialDatabase
+  m_EditorClassIdentifier: 
+  _staticMaterialPrefab: {fileID: 7119976793147907604, guid: a7a25e018c553c04fb11e73f9a4cc677, type: 3}
+  _dynamicMaterialPrefab: {fileID: 8700186767910036040, guid: db86d0a0194adc044bd1c16690526009, type: 3}
+  _maxAngle: 2
+  _materials:
+  - MaterialFriction:
+    - MinValue: 0.74
+      MaxValue: 0.74
+    - MinValue: 0.5
+      MaxValue: 0.55
+    - MinValue: 0.05
+      MaxValue: 0.1
+    - MinValue: 0.4
+      MaxValue: 0.45
+  - MaterialFriction:
+    - MinValue: 0.5
+      MaxValue: 0.55
+    - MinValue: 0.6
+      MaxValue: 0.7
+    - MinValue: 0.15
+      MaxValue: 0.2
+    - MinValue: 0.25
+      MaxValue: 0.3
