@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Contracts.Signal;
+using Contracts.Signal.LoadScene;
 using Infrastructure.Database;
 using Infrastructure.Factory;
 using Plugins.MessagePipe.MessageBus.Runtime;
@@ -38,6 +39,7 @@ namespace Infrastructure
 
         private void OnDestroy()
         {
+            _messageBus.Publish(new ClearSceneSignal());
             _choosePlatformsController.OnSelected -= SetupStand;
         }
     }

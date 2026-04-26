@@ -31,5 +31,10 @@ namespace View.UI
         {
             OnDispose?.Invoke();
         }
+
+        private void OnDestroy()
+        {
+            Dispose();
+        }
     }
 }
