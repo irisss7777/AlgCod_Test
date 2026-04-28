@@ -14,23 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _staticMaterialPrefab: {fileID: 7119976793147907604, guid: a7a25e018c553c04fb11e73f9a4cc677, type: 3}
   _dynamicMaterialPrefab: {fileID: 8700186767910036040, guid: db86d0a0194adc044bd1c16690526009, type: 3}
-  _maxAngle: 2
-  _materials:
-  - MaterialFriction:
-    - MinValue: 0.74
-      MaxValue: 0.74
-    - MinValue: 0.5
-      MaxValue: 0.55
-    - MinValue: 0.05
-      MaxValue: 0.1
-    - MinValue: 0.4
-      MaxValue: 0.45
-  - MaterialFriction:
-    - MinValue: 0.5
-      MaxValue: 0.55
-    - MinValue: 0.6
-      MaxValue: 0.7
-    - MinValue: 0.15
-      MaxValue: 0.2
-    - MinValue: 0.25
-      MaxValue: 0.3
+  _config:
+    MaxAngle: 10
+    Materials:
+    - MaterialFriction:
+      - MinValue: 0.74
+        MaxValue: 0.78
+      - MinValue: 0.5
+        MaxValue: 0.55
+      - MinValue: 0.05
+        MaxValue: 0.1
+      - MinValue: 0.4
+        MaxValue: 0.45
+    - MaterialFriction:
+      - MinValue: 0.5
+        MaxValue: 0.55
+      - MinValue: 0.6
+        MaxValue: 0.7
+      - MinValue: 0.15
+        MaxValue: 0.2
+      - MinValue: 0.25
+        MaxValue: 0.3

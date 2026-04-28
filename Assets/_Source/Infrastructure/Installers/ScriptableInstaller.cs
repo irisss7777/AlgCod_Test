@@ -1,3 +1,4 @@
+using Contracts.Database;
 using Infrastructure.Database;
 using UnityEngine;
 using Zenject;
@@ -11,7 +12,7 @@ namespace Infrastructure.Installers
         
         public override void InstallBindings()
         {
-            Container.Bind<MaterialDatabase>().FromInstance(_materialDatabase).AsSingle();
+            Container.Bind<IMaterialDatabase>().FromInstance(_materialDatabase).AsSingle();
         }
     }
 }

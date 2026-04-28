@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Contracts.Database;
 using Contracts.Signal;
 using Contracts.Signal.LoadScene;
 using Infrastructure.Database;
@@ -15,7 +16,7 @@ namespace Infrastructure
         [Inject] private readonly MessageBus _messageBus;
         [Inject] private readonly MaterialSelectionFactory _materialSelectionFactory;
         [Inject] private readonly ChoosePlatformsController _choosePlatformsController;
-        [Inject] private readonly MaterialDatabase _materialDatabase;
+        [Inject] private readonly IMaterialDatabase _materialDatabase;
 
         private void Start()
         {

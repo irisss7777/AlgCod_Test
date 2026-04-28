@@ -1,4 +1,6 @@
-﻿using Contracts.Signal;
+﻿using System;
+using Contracts.Database;
+using Contracts.Signal;
 using Plugins.MessagePipe.MessageBus.Runtime;
 using TMPro;
 using UnityEngine;
@@ -51,10 +53,19 @@ namespace View.Controllers
 
         private void GetResult()
         {
-            int firstMaterial = int.Parse(_firstMaterialInputField.text);
-            int secondMaterial = int.Parse(_secondMaterialInputField.text);
+            if(_firstMaterialInputField.text == "" || _secondMaterialInputField.text == "")
+                return;
             
-            _messageBus.Publish(new ExperimentResultSignal(firstMaterial, secondMaterial));
+            try
+            {
+                int firstMaterial = int.Parse(_firstMaterialInputField.text);
+                int secondMaterial = int.Parse(_secondMaterialInputField.text);
+            
+                _messageBus.Publish(new ExperimentResultSignal(firstMaterial, secondMaterial));
+            }
+            catch(Exception ex)
+            {
+            }
         }
 
         private void OnDestroy()

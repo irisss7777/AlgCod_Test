@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Contracts.Database;
 using Infrastructure.Database;
 using UnityEngine;
 using View.Controllers;
@@ -8,7 +9,7 @@ namespace Infrastructure.Factory
 {
     public class MaterialSelectionFactory
     {
-        [Inject] private readonly MaterialDatabase _materialDatabase;
+        [Inject] private readonly IMaterialDatabase _materialDatabase;
         [Inject] private readonly ChoosePlatformsController _choosePlatformsController;
 
         private const float ColorShift = 0.3f;
@@ -27,7 +28,7 @@ namespace Infrastructure.Factory
             for (int i = 0; i < staticCount; i++)
             {
                 Vector3 pos = firstParent.position + -Vector3.forward * i * offset;
-                MaterialSelectionView view = Object.Instantiate(_materialDatabase.StaticMaterialPrefab, pos, Quaternion.identity, firstParent);
+                MaterialSelectionView view = Object.Instantiate(_materialDatabase.StaticMaterialPrefab as MaterialSelectionView, pos, Quaternion.identity, firstParent);
                 view.Initialize(i, true);
                 spawnedViews.Add(view);
                 ApplyRandomColorShift(view);
@@ -36,7 +37,7 @@ namespace Infrastructure.Factory
             for (int i = 0; i < dynamicCount; i++)
             {
                 Vector3 pos = secondParent.position + -Vector3.forward * i * offset;
-                MaterialSelectionView view = Object.Instantiate(_materialDatabase.DynamicMaterialPrefab, pos, Quaternion.identity, secondParent);
+                MaterialSelectionView view = Object.Instantiate(_materialDatabase.DynamicMaterialPrefab as MaterialSelectionView, pos, Quaternion.identity, secondParent);
                 view.Initialize(i, false);
                 spawnedViews.Add(view);
                 ApplyRandomColorShift(view);
